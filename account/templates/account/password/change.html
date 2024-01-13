@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Change Password</h2>
+  <form method="post" action="{% url 'account_change_password' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Change Password</button>
+  </form>
+{% endblock %}
