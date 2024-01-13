@@ -34,20 +34,20 @@ def custom_signup(request):
     # Your custom signup logic here
     return render(request, 'account/custom_signup.html', {})
 
-class CustomPasswordChangeView(PasswordChangeView):
+class PasswordChangeView(PasswordChangeView):
     template_name = 'password/change.html'
 
-class CustomPasswordResetDoneView(PasswordResetDoneView):
+class PasswordResetDoneView(PasswordResetDoneView):
     template_name = 'password/reset_done.html'
 
-class CustomPasswordResetView(PasswordResetView):
+class PasswordResetView(PasswordResetView):
     template_name = 'password/reset.html'
 
-class CustomLoginView(LoginView):
+class LoginView(LoginView):
     template_name = 'account/login.html'
 
-class CustomLogoutView(LogoutView):
+class LogoutView(LogoutView):
     template_name = 'account/logout.html'
 
-class CustomSignupView(SignupView):
+class SignupView(SignupView):
     template_name = 'registration/signup.html'
