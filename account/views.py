@@ -20,7 +20,7 @@ def register(request):
             user.save()
 
             login(request, user)
-            return redirect('home')
+            return redirect('base')
     else:
         form = RegistrationForm()
 
